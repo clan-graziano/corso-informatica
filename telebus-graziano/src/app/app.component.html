@@ -1,0 +1,15 @@
+<input type="text" #nome> : nome 
+<br>
+<br>
+<input type="text" #post> : post
+<br>
+<br>
+<button (click)="addPost(nome.value, post.value)">Add Post</button>
+<br>
+{{vettpost}}
+
+@for(post of vettpost; track post)
+{
+ <app-post [post]="post"> </app-post>
+ 
+}
