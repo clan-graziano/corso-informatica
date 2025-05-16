@@ -1,15 +1,13 @@
-<input type="text" #nome> : nome 
+<input type="text" #nome> : nome (userId)
 <br>
 <br>
-<input type="text" #post> : post
+<input type="text" #post> : post (body)
 <br>
 <br>
 <button (click)="addPost(nome.value, post.value)">Add Post</button>
 <br>
-{{vettpost}}
-
 @for(post of vettpost; track post)
 {
- <app-post [post]="post"> </app-post>
+ <app-post [post]="post"></app-post>
  
 }
